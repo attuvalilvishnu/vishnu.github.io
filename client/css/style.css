@@ -36,3 +36,39 @@ body {
   nav .current > a {
     color: yellow;
   }
+
+
+  #input{
+    width:0px;
+    height:0px;
+    overflow:hidden;
+  }
+
+  #input:focus + label{
+    outline:5px solid teal;
+  }
+
+  #input + label{
+    background-color: teal;
+    padding: 10px;
+    cursor: all;
+    cursor: pointer;
+    outline:1px solid black;
+  }
+
+
+  #notification_home{
+    position: relative;
+    top: 50px;
+  }
+
+  #img{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+  }
+
+  img {
+    width: 200px;
+    height: 300px;
+  }
