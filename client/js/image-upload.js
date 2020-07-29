@@ -1,4 +1,6 @@
+
 (() => {
+
     const $input = document.getElementById('input');
     const $img = document.getElementById('img');
     const $preview = document.getElementById('preview');
@@ -21,7 +23,7 @@
         const height = $preview.height;
         const imageData = previewCtr.getImageData(0, 0, width, height);
         const payload = { imageData, type: 'imageProcessing' }
-        worker.postMessage(payload,[imageData.data.buffer]);
+        worker.postMessage(payload, [imageData.data.buffer]);
     }
 
     /*image.addEventListener('load', (eve) => {

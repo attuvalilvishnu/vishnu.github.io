@@ -5,9 +5,17 @@ const path = require("path");
 
 const app = express();
 
+const tiny = require('@attuvalilvishnu/tiny');
+console.log(tiny('1234'));
+
 // Set static path
 const pa = `${__dirname}/client`;
+const node_modules = `${__dirname}/node_modules`;
+console.log(node_modules);
+
 app.use(express.static(pa));
+app.use(express.static(node_modules));
+
 
 app.use(bodyParser.json());
 
@@ -36,7 +44,7 @@ app.post("/subscribe", (req, res) => {
     payload = JSON.stringify(
       { title: "Push notification for home", body: 'Notified by home page' }
     );
-  } else{
+  } else {
     payload = JSON.stringify(
       { title: "Push notification for about", body: 'Notified by about page' }
     );
